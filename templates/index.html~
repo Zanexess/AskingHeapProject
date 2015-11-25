@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AskingHeap</title>
+    <link href="static/css/bootstrap.css" rel="stylesheet">
+    <link href="static/css/style.css" rel="stylesheet">
+  </head>
+  <header>
+      <div class="container" class="logo">
+          <img src="static/logo.png">
+      </div>
+  </header>
+  <body>
+      <div class="navbar navbar-inverse navbar-static-top">
+         <div class="container">
+            <div class="navbar-header">         
+               <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#responsive-menu">
+                   <span class="sr-only">Открыть навигацию</span>
+                   <span class="icon-bar"></span>
+                   <span class="icon-bar"></span>
+                   <span class="icon-bar"></span>
+               </button>
+            </div>
+            <div class="collapse navbar-collapse" id="responsive-menu">
+                <ul class="nav navbar-nav">
+                        <li class="active"><a href="index.html">Вопросы</a> </li>
+                        <li><a href="ask.html">Задать вопрос</a> </li>
+                        <li><a href="profile.html">Профиль</a></li>
+                        <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Меню<b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            
+                            <li><a href="login.html">Войти</a></li>
+                            <li><a href="register.html">Регистрация</a></li>
+                            <li><a href="#">Статистика</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">О проекте</a></li>
+                        </ul>
+                       </li>
+                </ul>
+                <!--Для всего, кроме планшета-->
+                <form action="" class="navbar-form navbar-right hidden-sm">
+                        <button type="submit" class="btn btn-primary">
+                            <i></i> Войти
+                        </button>
+                        
+                        <button type="submit" class="btn btn-success">
+                            <i></i> Регистрация
+                        </button>   
+                </form>
+                <!--Для планшета-->
+                <form action="" class="navbar-form navbar-right">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Search" value="">
+                        </div>
+                        <button type="submit" class="btn btn-primary">
+                            <i></i> Поиск
+                        </button>
+                </form>
+                
+            </div>
+        </div>
+     </div>
+        
+     <div id="carousel" class="carousel slide">
+            <!--Индикаторы слайдов-->
+            <ol class="carousel-indicators">
+                <li class="active" data-target="#carousel" data-slide-to="0"></li>
+                <li data-target="#carousel" data-slide-to="1"></li>
+                <li data-target="#carousel" data-slide-to="2"></li>
+            </ol>
+            <!--Слайды-->
+            <div class="carousel-inner">
+                <div class="item active">
+                    <img src="static/1.png" alt="">
+                </div>
+                <div class="item">
+                    <img src="static/2.png" alt="">
+
+                </div>
+                <div class="item">
+                    <img src="static/3.png" alt="">
+                </div>
+            </div>
+            <!--Стрелки переключения слайдов-->
+            <a href="#carousel" class="left carousel-control" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+            </a>
+
+            <a href="#carousel" class="right carousel-control" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right"></span>
+            </a>
+        </div>      
+     
+     <div class="container">
+         <div class="row">
+               <div class="col-lg-9 col-sm-9 col-md-9">
+                       <style>
+                          .text{
+                              text-align: center;
+                          }
+                       </style>
+                   <div class="col-lg-4 col-sm-4 col-md-4 col-es-4 text">
+                       <h3><b><a href="index.html">Новые вопросы</a></b></h3>
+                    </div>
+                   <div class="col-lg-4 col-sm-4 col-md-4 col-es-4 text">
+                       <h3><a href="index.html">Горячие вопросы</a></h3>
+                   </div>
+                     <br>
+                     <br>
+                     <br>
+                     <br>
+                     
+                     
+                    <div class="panel panel-default post">
+                        <div class="panel-body">
+                            <div class="row">
+                                <div class="col-lg-3 col-sm-3 col-md-3 col-es-3">
+                                    <a class="post-avatar thumbnail" href="profile.html"><img src="static/ava.png">
+                                        <div class="text-center">DevUser1</div>
+                                    </a>
+                                    <div class="likes text-center">
+                                    <button type="button" class="btn btn-default btn-es">
+                                          <span class="glyphicon glyphicon glyphicon-thumbs-up"></span>
+                                    </button>
+                                    6 Likes
+                                    <button type="button" class="btn btn-default btn-es">
+                                          <span class="glyphicon glyphicon glyphicon-thumbs-down"></span>
+                                    </button>
+                                    </div>
+                                </div>
+                                <div class="col-lg-9 col-sm-9 col-md-9 col-es-9">
+                                    <div class="bubble">
+                                        <div class="pointer">
+                                            <h4><b>Как научиться находить смысл в сложной, иносказательной поэзии?</b></h4>
+                                            <p>Общие советы таковы: читать больше поэзии, читать медленно (вдумчиво), ставить под вопрос каждое слово и его связи с другими словами, не стесняться пользоваться справочными материалами (в современной поэзии вы легко встретите и героев античной мифологии третьего ряда, и терминологию из теоретической физики или экономики, и отсылки к философам). Подходя к произведению, стоит руководствоваться так называемой презумпцией смысла: вы предполагаете, что в нем заключаются осмысленные сообщения, и ваша задача как читателя — считать, дешифро ... </p>
+                                        </div>
+                                        <div class="pointer-border"></div>
+                                    </div>
+                                    <p class="post-actions"><a href="post.html">Answers(2)</a> Tags: <a href="#"> Литература</a> <a href="#">, поэзия</a> </p> 
+                                    
+                                </div>
+                            </div>
+                        </div>
+                   </div>
+                   
+                             
+                   <div class="panel panel-default post">
+                        <div class="panel-body">
+                            <div class="row">
+                                <div class="col-lg-3 col-sm-3 col-md-3 col-es-3">
+                                    <a class="post-avatar thumbnail" href="profile.html"><img src="static/ava.png">
+                                        <div class="text-center">DevUser2</div>
+                                    </a>
+                                    <div class="likes text-center">
+                                    <button type="button" class="btn btn-default btn-es">
+                                          <span class="glyphicon glyphicon glyphicon-thumbs-up"></span>
+                                    </button>
+                                    7 Likes
+                                    <button type="button" class="btn btn-default btn-es">
+                                          <span class="glyphicon glyphicon glyphicon-thumbs-down"></span>
+                                    </button>
+                                    </div>
+                                </div>
+                                <div class="col-lg-9 col-sm-9 col-md-9 col-es-9">
+                                    <div class="bubble">
+                                        <div class="pointer">
+                                            <h4><b>Какую воду лучше пить в жару? Газированную или нет?</b></h4>
+                                            <p>В жару лучше пить прохладную (12'С) воду, например, с добавлением сока лимона. И лучше это делать небольшими порциями, но часто. Если Вы готовите для домашнего принятия воды или с возможностью ее взять с собой, то можно делать разные миксы: С вечера приготовьте графин с чистой водой, добавьте туда порезанные фрукты, овощи, ягоды, цитрусы, травки или корешки, поставь на ночь в холодильник, а утром начинайте наслаждаться ей вместо кофе, чая, газировки и, конечно же, вместо алкоголя. В состав можно добавить:  ... </p>
+                                        </div>
+                                        <div class="pointer-border"></div>
+                                    </div>
+                                    <p class="post-actions"><a href="post.html">Answers(2)</a> Tags: <a href="#"> Газировка</a> <a href="#">, вода</a> </p> 
+                                    
+                                </div>
+                            </div>
+                        </div>
+                   </div>
+                             
+                   <div class="panel panel-default post">
+                        <div class="panel-body">
+                            <div class="row">
+                                <div class="col-lg-3 col-sm-3 col-md-3 col-es-3">
+                                    <a class="post-avatar thumbnail" href="profile.html"><img src="static/ava.png">
+                                        <div class="text-center">DevUser3</div>
+                                    </a>
+                                    <div class="likes text-center">
+                                    <button type="button" class="btn btn-default btn-es">
+                                          <span class="glyphicon glyphicon glyphicon-thumbs-up"></span>
+                                    </button>
+                                    2 Likes
+                                    <button type="button" class="btn btn-default btn-es">
+                                          <span class="glyphicon glyphicon glyphicon-thumbs-down"></span>
+                                    </button>
+                                    </div>
+                                </div>
+                                <div class="col-lg-9 col-sm-9 col-md-9 col-es-9">
+                                    <div class="bubble">
+                                        <div class="pointer">
+                                            <h4><b>Изучают ли паралитературу, и, если да, то как именно и зачем?</b></h4>
+                                            <p>Разумеется, да: это представляет и культурологический, и социологический интерес. Мне известны работы о Донцовой и Марининой (в том числе западных славистов, см., например: ac.be ; dukeupress.edu). А вот, например, диссертация о фанфикшене: (pitt.edu). Прямо сейчас я пишу рецензию на книгу французского культуролога Фредерика Рувиллуа «История бестселлеров», к сожалению, испохабленную в переводе. Рувиллуа пытается отыскать факторы, делающие книгу бестселлером (находит в основном во внелитературных причинах). Что касается поэзии, могу порекомендовать книгу Олега Лекманова «Русская поэзия в 1913 году»  ... </p>
+                                        </div>
+                                        <div class="pointer-border"></div>
+                                    </div>
+                                    <p class="post-actions"><a href="post.html">Answers(3)</a> Tags: <a href="#"> Литература</a> <a href="#">, культуа</a> </p> 
+                                    
+                                </div>
+                            </div>
+                        </div>
+                   </div>
+                             
+                   <div class="panel panel-default post">
+                        <div class="panel-body">
+                            <div class="row">
+                                <div class="col-lg-3 col-sm-3 col-md-3 col-es-3">
+                                    <a class="post-avatar thumbnail" href="profile.html"><img src="static/ava.png">
+                                        <div class="text-center">DevUser4</div>
+                                    </a>
+                                    <div class="likes text-center">
+                                    <button type="button" class="btn btn-default btn-es">
+                                          <span class="glyphicon glyphicon glyphicon-thumbs-up"></span>
+                                    </button>
+                                    9 Likes
+                                    <button type="button" class="btn btn-default btn-es">
+                                          <span class="glyphicon glyphicon glyphicon-thumbs-down"></span>
+                                    </button>
+                                    </div>
+                                </div>
+                                <div class="col-lg-9 col-sm-9 col-md-9 col-es-9">
+                                    <div class="bubble">
+                                        <div class="pointer">
+                                            <h4><b>Есть ли течения в религиоведении, которые воспринимают бога, как художественный образ.</b></h4>
+                                            <p>Дело в том, что религиоведение не занимается изучением Бога или формированием какого-то мнения о Боге (этим занимается теология), но оно изучает объективно существующие представления о Боге или богах, почерпнутые из материальных источников (текстов, людей и т. д.). Воспринимать бога как художественный образ - это мировоззренческая позиция. Наука всегда должна быть мировоззренчески нейтральна. Текст религиоведческого исследования составляется таким образом, чтобы он ...  </p>
+                                        </div>
+                                        <div class="pointer-border"></div>
+                                    </div>
+                                    <p class="post-actions"><a href="post.html">Answers(2)</a> Tags: <a href="#"> Религия</a></p> 
+                                </div>
+                            </div>
+                        </div>
+                   </div>
+                             
+                   <div class="panel panel-default post">
+                        <div class="panel-body">
+                            <div class="row">
+                                <div class="col-lg-3 col-sm-3 col-md-3 col-es-3">
+                                    <a class="post-avatar thumbnail" href="profile.html"><img src="static/ava.png">
+                                        <div class="text-center">DevUser5</div>
+                                    </a>
+                                    <div class="likes text-center">
+                                    <button type="button" class="btn btn-default btn-es">
+                                          <span class="glyphicon glyphicon glyphicon-thumbs-up"></span>
+                                    </button>
+                                    7 Likes
+                                    <button type="button" class="btn btn-default btn-es">
+                                          <span class="glyphicon glyphicon glyphicon-thumbs-down"></span>
+                                    </button>
+                                    </div>
+                                </div>
+                                <div class="col-lg-9 col-sm-9 col-md-9 col-es-9">
+                                    <div class="bubble">
+                                        <div class="pointer">
+                                            <h4><b>Какую помаду любила Ева Браун?</b></h4>
+                                            <p>Вот страница, на которой предлагают купить личные вещи Евы Браун: (snyderstreasures.com). Я не уверен, что эти вещи подлинные, хотя к каждой там прилагается провенанс, но среди них есть несколько коробочек из-под губной помады. Вещи, как видим, изысканные и дорогие, так что если это действительно ее вещи, то можно ответить, что она любила дорогую помаду. На коробочке, кажется, написано слово «Italy». Сама помада видн  ... </p>
+                                        </div>
+                                        <div class="pointer-border"></div>
+                                    </div>
+                                    <p class="post-actions"><a href="post.html">Answers(1)</a> Tags: <a href="#"> Красота</a> <a href="#">, история</a> </p> 
+                                    
+                                </div>
+                            </div>
+                        </div>
+                   </div>
+    
+               </div>
+               <div class="sidebar-module sidebar-module-inset">
+                    <div class="col-lg-3 col-sm-3 col-md-3 col-es-3">
+                      <br>
+                      <br>
+                      <br>
+                      <br>
+                      <div class="panel panel-default tags">
+                          <div class="panel-heading">
+                              <h3 class="panel-title">Tags</h3>
+                          </div>
+                          <div class="panel-body">
+                             <ul>
+                              <li><a class="thumbnail" href="profile.html">html</a></li>
+                              <li><a class="thumbnail" href="profile.html">perl</a></li>
+                              <li><a class="thumbnail" href="profile.html">incapsulation</a></li>
+                              <li><a class="thumbnail" href="profile.html">c++</a></li>
+                              <li><a class="thumbnail" href="profile.html">programming</a></li>
+                              <li><a class="thumbnail" href="profile.html">sql</a></li>
+                              <li><a class="thumbnail" href="profile.html">python</a></li>
+                              <li><a class="thumbnail" href="profile.html">question</a></li>
+                              <li><a class="thumbnail" href="profile.html">engines</a></li>
+                            </ul>
+                          </div>
+                      </div>
+
+                      <div class="panel panel-default best">
+                          <div class="panel-heading">
+                              <h3 class="panel-title">Best Members</h3>
+                          </div>
+                          <div class="panel-body">
+                             <ul>
+                              <li><a class="thumbnail" href="profile.html"><img src="static/ava.png"></a></li>
+                              <li><a class="thumbnail" href="profile.html"><img src="static/ava.png"></a></li>
+                              <li><a class="thumbnail" href="profile.html"><img src="static/ava.png"></a></li>
+                              <li><a class="thumbnail" href="profile.html"><img src="static/ava.png"></a></li>
+                              <li><a class="thumbnail" href="profile.html"><img src="static/ava.png"></a></li>
+                              <li><a class="thumbnail" href="profile.html"><img src="static/ava.png"></a></li>
+                              <li><a class="thumbnail" href="profile.html"><img src="static/ava.png"></a></li>
+                              <li><a class="thumbnail" href="profile.html"><img src="static/ava.png"></a></li>
+                              <li><a class="thumbnail" href="profile.html"><img src="static/ava.png"></a></li>
+                            </ul>
+                            <!-- <div class="clearfix">
+                            <a class="btn btn-primary" href="#">View all top members</a>
+                            </div> -->
+                          </div>
+                      </div>
+                      <br>
+                       </div>
+               </div>
+         </div>
+         <ul class="pager pager-left">
+            <li><a href="#">1</a></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">4</a></li>
+            ...
+            <li><a href="#">114</a></li>
+          </ul>
+     </div>      
+
+</body>
+    <footer>
+        <div class="text">
+              ©Todos los derechos reservados 
+        </div>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+</html>

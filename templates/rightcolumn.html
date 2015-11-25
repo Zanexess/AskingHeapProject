@@ -1,0 +1,48 @@
+{% load staticfiles %}
+
+
+{% block rightcolumn %}
+<div class="col-lg-3 col-sm-3 col-md-3 col-es-3">
+  <br>
+  <div class="panel panel-default tags">
+      <div class="panel-heading">
+          <h3 class="panel-title">Tags</h3>
+      </div>
+      <div class="panel-body">
+         <ul>
+          <li><a class="thumbnail" href="#">html</a></li>
+          <li><a class="thumbnail" href="#">incapsulation</a></li>
+          <li><a class="thumbnail" href="#">c++</a></li>
+          <li><a class="thumbnail" href="#">programming</a></li>
+          <li><a class="thumbnail" href="#">sql</a></li>
+          <li><a class="thumbnail" href="#">python</a></li>
+          <li><a class="thumbnail" href="#">question</a></li>
+          <li><a class="thumbnail" href="#">engines</a></li>
+        </ul>
+      </div>
+  </div>
+
+  <div class="panel panel-default best">
+      <div class="panel-heading">
+          <h3 class="panel-title">Best Members</h3>
+      </div>
+      <div class="panel-body">
+         <ul>
+             <li><a class="thumbnail" href="#"><img src={% static "ava.png" %}></a></li>
+             <li><a class="thumbnail" href="#"><img src={% static "ava.png" %}></a></li>
+             <li><a class="thumbnail" href="#"><img src={% static "ava.png" %}></a></li>
+             <li><a class="thumbnail" href="#"><img src={% static "ava.png" %}></a></li>
+             <li><a class="thumbnail" href="#"><img src={% static "ava.png" %}></a></li>
+             <li><a class="thumbnail" href="#"><img src={% static "ava.png" %}></a></li>
+             <li><a class="thumbnail" href="#"><img src={% static "ava.png" %}></a></li>
+             <li><a class="thumbnail" href="#"><img src={% static "ava.png" %}></a></li>
+             <li><a class="thumbnail" href="#"><img src={% static "ava.png" %}></a></li>
+        </ul>
+        <!-- <div class="clearfix">
+        <a class="btn btn-primary" href="#">View all top members</a>
+        </div> -->
+      </div>
+  </div>
+  <br>
+   </div>
+{% endblock %}

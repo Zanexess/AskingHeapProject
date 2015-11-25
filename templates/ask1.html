@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% block title %}Задать вопрос{% endblock %}
+
+{% block include %}
+    <link href={% static "css/ask.css" %} rel="stylesheet">
+
+{% endblock %}
+
+{% block login %}
+    {% include "login_auth.html" %}
+{% endblock %}
+
+{% block leftcolumntop %}
+<div class="col-lg-9 col-sm-9 col-md-9">
+    <form action="/question/newquestion/" method="post">
+        {% csrf_token %}
+                    <h3 class="titletext">Задать новый вопрос</h3>
+                    <div class="panel panel-default post">
+                        <div class="panel-body">
+                            <div class="row titlerow">
+                                <div class="col-lg-2 col-sm-2 col-md-2 col-es-2">
+                                    <p class="naming"><b>Заголовок*</b></p>
+                                </div>
+                                <div class="col-lg-10 col-sm-10 col-md-10 col-es-10">
+                                    <textarea class="form-control control" rows="2" placeholder="Заголовок вопроса" name="title" id="title"></textarea>
+                                </div>
+                            </div>
+                            <div class="row textrow">
+                                <div class="col-lg-2 col-sm-2 col-md-2 col-es-2">
+                                    <p class="naming"><b>Текст*</b></p>
+                                </div>
+                                <div class="col-lg-10 col-sm-10 col-md-10 col-es-10">
+                                    <form>
+                                        <div class="form-group">
+                                            <textarea class="form-control control" rows="15" placeholder="Текст" name="text" id="text"></textarea>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="row tagsrow">
+                                <div class="col-lg-2 col-sm-2 col-md-2 col-es-2">
+                                    <p class="naming"><b>Тэги</b></p>
+                                </div>
+                                <div class="col-lg-10 col-sm-10 col-md-10 col-es-10">
+                                    <textarea class="form-control control" rows="1" placeholder="Тэги" name="tags" id="tags"></textarea>
+
+                                    {% if danger %}
+                                        <p class="danger">{{ danger }}</p>
+                                    {% endif %}
+
+                                    <button type="submit" class="btn btn-default askbutton">Задать вопрос</button>
+                                </div>
+                            </div>
+                        </div>
+                   </div>
+    </form>
+    {% endblock %}
+
+      
+{% block rightcolumn %}
+<br><br>
+{% include "rightcolumn.html" %}
+{% endblock %}   

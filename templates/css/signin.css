@@ -1,0 +1,68 @@
+body{
+    margin-bottom: 70px;
+    background: linear-gradient(to bottom, rgba(240,249,255,1) 0%,rgba(203,235,255,1) 47%,rgba(161,219,255,1) 100%);
+}
+
+.form-signin {
+  max-width: 330px;
+  padding: 15px;
+  margin: 0 auto;
+}
+.form-signin .form-signin-heading,
+.form-signin .checkbox {
+    margin-bottom: 10px;
+    margin-left: 20px;
+}
+.form-signin .checkbox {
+  font-weight: normal;
+}
+.form-signin .form-control {
+  position: relative;
+  height: auto;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 10px;
+  font-size: 16px;
+}
+.form-signin .form-control:focus {
+  z-index: 2;
+}
+.form-signin input[type="email"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.form-signin input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+footer {
+    position: absolute;
+  bottom: 0;
+  width: 100%;
+    background: linear-gradient(178deg, rgb(32, 50, 230) 6%, rgb(177, 195, 255) 79%);
+    max-height: 70px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    text-align:  center;
+}
+html{
+      position: relative;
+  min-height: 100%;
+}
+
+.danger{
+    text-align: center;
+    color: red;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.imageavatar{
+    margin-bottom: 10px;
+    margin-left: 30%;
+    margin-right: 30%;
+    width:  100px;
+}

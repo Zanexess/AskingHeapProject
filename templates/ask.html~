@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AskingHeap</title>
+    <link href="/static/css/bootstrap.css" rel="stylesheet">
+    <link href="/static/css/style.css" rel="stylesheet">
+    <link href="/static/css/ask.css" rel="stylesheet">
+  </head>
+  <header>
+      <div class="container" class="logo">
+          <img src="/static/logo.png">
+      </div>
+  </header>
+  <body>
+      <div class="navbar navbar-inverse navbar-static-top">
+         <div class="container">
+            <div class="navbar-header">         
+               <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#responsive-menu">
+                   <span class="sr-only">Открыть навигацию</span>
+                   <span class="icon-bar"></span>
+                   <span class="icon-bar"></span>
+                   <span class="icon-bar"></span>
+               </button>
+            </div>
+            <div class="collapse navbar-collapse" id="responsive-menu">
+                <ul class="nav navbar-nav">
+                        <li class="active"><a href="index.html">Вопросы</a> </li>
+                        <li><a href="ask.html">Задать вопрос</a> </li>
+                        <li><a href="profile.html">Профиль</a></li>
+                        <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Меню<b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="profile.html">Профиль</a></li>
+                            <li><a href="#">Статистика</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">О проекте</a></li>
+                        </ul>
+                       </li>
+                </ul>
+                <!--Для всего, кроме планшета-->
+                <form action="" class="navbar-form navbar-right hidden-sm">
+                        <span><img src="/static/ava.png" width="34" height="34"></span>
+                        <div class="btn-group">
+                            <button type="submit" class="btn btn-success"
+                                <i></i> Профиль, %UserName% </span>
+                            </button>
+                            <button type="submit" class="btn btn-success dropdown-toggle" data-toggle="dropdown"> 
+                                <i></i><span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Settings</a></li>
+                                <li><a href="#">Profile</a></li>
+                                <li class="divider"></li>
+                                <li><a href="#">Log out</a></li>
+                            </ul>
+                        </div>                         
+                </form>
+                
+                <form action="" class="navbar-form navbar-right">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Search" value="">
+                        </div>
+                        <button type="submit" class="btn btn-primary">
+                            <i></i> Поиск
+                        </button>
+                </form>
+            </div>
+        </div>
+        
+     </div>
+       
+      
+     <div class="container">
+         <div class="row">
+               <div class="col-lg-9 col-sm-9 col-md-9">
+                    <h3 class="titletext">Задать новый вопрос</h3>
+                    <div class="panel panel-default post">
+                        <div class="panel-body">
+                            <div class="row titlerow">
+                                <div class="col-lg-2 col-sm-2 col-md-2 col-es-2">
+                                    <p class="naming">Заголовок</p>
+                                </div>
+                                <div class="col-lg-10 col-sm-10 col-md-10 col-es-10">
+                                    <textarea class="form-control control" rows="2" placeholder="Заголовок вопроса"></textarea>
+                                </div>
+                            </div>
+                            <div class="row textrow">
+                                <div class="col-lg-2 col-sm-2 col-md-2 col-es-2">
+                                    <p class="naming">Текст</p>
+                                </div>
+                                <div class="col-lg-10 col-sm-10 col-md-10 col-es-10">
+                                    <form>
+                                        <div class="form-group">
+                                            <textarea class="form-control control" rows="15" placeholder="Текст"></textarea>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="row tagsrow">
+                                <div class="col-lg-2 col-sm-2 col-md-2 col-es-2">
+                                    <p class="naming">Тэги</p>
+                                </div>
+                                <div class="col-lg-10 col-sm-10 col-md-10 col-es-10">
+                                    <textarea class="form-control control" rows="1" placeholder="Тэги"></textarea>
+                                    <p class="danger">Тут уведомление об ошибке</p>  
+                                    <button type="submit" class="btn btn-default askbutton">Задать вопрос</button>
+                                </div>
+                            </div>
+                        </div>
+                   </div>
+                   
+               
+    
+               </div>
+               <div class="sidebar-module sidebar-module-inset">
+                    <div class="col-lg-3 col-sm-3 col-md-3 col-es-3">
+                      <br>
+                      <br>
+                      <br>
+                      <div class="panel panel-default tags">
+                          <div class="panel-heading">
+                              <h3 class="panel-title">Tags</h3>
+                          </div>
+                          <div class="panel-body">
+                             <ul>
+                              <li><a class="thumbnail" href="profile.html">html</a></li>
+                              <li><a class="thumbnail" href="profile.html">perl</a></li>
+                              <li><a class="thumbnail" href="profile.html">incapsulation</a></li>
+                              <li><a class="thumbnail" href="profile.html">c++</a></li>
+                              <li><a class="thumbnail" href="profile.html">programming</a></li>
+                              <li><a class="thumbnail" href="profile.html">sql</a></li>
+                              <li><a class="thumbnail" href="profile.html">python</a></li>
+                              <li><a class="thumbnail" href="profile.html">question</a></li>
+                              <li><a class="thumbnail" href="profile.html">engines</a></li>
+                            </ul>
+                          </div>
+                      </div>
+
+                      <div class="panel panel-default best">
+                          <div class="panel-heading">
+                              <h3 class="panel-title">Best Members</h3>
+                          </div>
+                          <div class="panel-body">
+                             <ul>
+                              <li><a class="thumbnail" href="profile.html"><img src="/static/ava.png"></a></li>
+                              <li><a class="thumbnail" href="profile.html"><img src="/static/ava.png"></a></li>
+                              <li><a class="thumbnail" href="profile.html"><img src="/static/ava.png"></a></li>
+                              <li><a class="thumbnail" href="profile.html"><img src="/static/ava.png"></a></li>
+                              <li><a class="thumbnail" href="profile.html"><img src="/static/ava.png"></a></li>
+                              <li><a class="thumbnail" href="profile.html"><img src="/static/ava.png"></a></li>
+                              <li><a class="thumbnail" href="profile.html"><img src="/static/ava.png"></a></li>
+                              <li><a class="thumbnail" href="profile.html"><img src="/static/ava.png"></a></li>
+                              <li><a class="thumbnail" href="profile.html"><img src="/static/ava.png"></a></li>
+                            </ul>
+                            <!-- <div class="clearfix">
+                            <a class="btn btn-primary" href="#">View all top members</a>
+                            </div> -->
+                          </div>
+                      </div>
+                      <br>
+                       </div>
+               </div>
+         </div>
+     </div>      
+     
+     
+       
+     
+   </body>    
+     
+    <footer>
+        <div class="text">
+              ©Todos los derechos reservados 
+        </div>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+</html>

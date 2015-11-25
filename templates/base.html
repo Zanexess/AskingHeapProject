@@ -1,0 +1,125 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}{% endblock %}</title>
+    <link href={% static "css/bootstrap.css" %} rel="stylesheet">
+    <link href={% static "css/style.css" %} rel="stylesheet">
+    {% block include %}{% endblock %}
+  </head>
+
+  <header>
+      <div class="container" class="logo">
+          <a href="{% url 'home' %}"><img src={% static "logo.png" %}></a>
+      </div>
+  </header>
+
+  <body>
+      <div class="navbar navbar-inverse navbar-static-top">
+         <div class="container">
+            <div class="navbar-header">         
+               <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#responsive-menu">
+                   <span class="sr-only">Открыть навигацию</span>
+                   <span class="icon-bar"></span>
+                   <span class="icon-bar"></span>
+                   <span class="icon-bar"></span>
+               </button>
+            </div>
+            <div class="collapse navbar-collapse" id="responsive-menu">
+                <ul class="nav navbar-nav">
+                        <li><a href="{% url 'feed'%}">Вопросы</a> </li>
+                        {% if user.is_authenticated %}
+                            <li><a href="{% url 'create'%}">Задать вопрос</a> </li>
+                            <li><a href="#">Профиль</a></li>
+                        {% endif %}
+                        <li class="dropdown">
+                        <a href="" class="dropdown-toggle" data-toggle="dropdown">Меню<b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            {% if not user.is_authenticated %}
+                                <li><a href="{% url 'login' %}">Войти</a></li>
+                                <li><a href="{% url 'register' %}">Регистрация</a></li>
+                            {% else %}
+                                <li><a href="{% url 'logout' %}">Выход</a></li>
+                            {% endif %}
+{#                            <li><a href="{% url 'question'%}">Страница вопроса</a></li>#}
+                            <li class="divider"></li>
+                            <li><a href="#">О проекте</a></li>
+                        </ul>
+                       </li>
+                </ul>
+
+
+
+                    {% if user.is_authenticated %}
+                        <form action="" class="navbar-form navbar-right hidden-sm">
+                            <span><img src={% static "ava.png" %} width="34" height="34"></span>
+                            <div class="btn-group">
+                                 <button type="submit" class="btn btn-success"
+                                      <i></i> Профиль, {{ user }} </span>
+                                 </button>
+                                 <button type="submit" class="btn btn-success dropdown-toggle" data-toggle="dropdown">
+                                 <i></i><span class="caret"></span>
+                                 </button>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">Настройки</a></li>
+                                    <li><a href="#">Profile</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="{% url 'logout' %}">Log out</a></li>
+                                </ul>
+                            </div>
+                        </form>
+                    {% else %}
+                    <!--Для всего, кроме планшета-->
+                         <form action="" class="navbar-form navbar-right hidden-sm">
+                             <a href="{% url 'login' %}" class="btn btn-success" type="submit">Войти</a>
+                             <a href="{% url 'register' %}" class="btn btn-primary" type="submit">Регистрация</a>
+                         </form>
+                    {% endif %}
+                
+                <!--Для планшета-->
+                <form action="" class="navbar-form navbar-right">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Search" value="">
+                        </div>
+                        <button type="submit" class="btn btn-primary">
+                            <i></i> Поиск
+                        </button>
+                </form>
+            </div>
+        </div>
+     </div>
+     
+
+     
+     <div class="container">
+         <div class="row">
+               {% block leftcolumntop %}
+                   {% block content %}
+                   {% endblock %}
+               {% endblock %}
+        </div>
+        <div class="sidebar-module sidebar-module-inset">
+               {% block rightcolumn %}
+               {% endblock %} 
+        </div>
+    </div>
+         {% block pager %}
+         {% endblock %}    
+     </div>      
+
+</body>
+    <footer>
+        <div class="text">
+              ©Todos los derechos reservados 
+        </div>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src={% static "js/bootstrap.min.js" %}></script>
+    <script src={% static "js/my.js" %}></script>
+
+</html>

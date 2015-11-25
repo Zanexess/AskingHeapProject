@@ -1,0 +1,149 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% block login %}
+    {% include "login_auth.html" %}
+{% endblock %}
+
+
+{% load widget_tweaks %}
+
+
+
+{% block include %}
+        <link href={% static "css/ask.css" %} rel="stylesheet">
+{% endblock %} 
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block leftcolumntop %}
+<div class="col-lg-9 col-sm-9 col-md-9 ">
+                     
+     {% for instance in queryset %}
+         <div class="panel-body">
+            <div class="row">
+                <div class="col-lg-3 col-sm-3 col-md-3 col-es-3">
+                    <a class="post-avatar thumbnail" href="profile.html"><img src={% static "ava.png" %}>
+                        <div class="text-center">{{ instance.author }}</div>
+                    </a>
+                    <div class="likes text-center">
+                        {% if user.is_authenticated %}
+                            <div class="likes text-center">
+                                <form action="/question/like/{{ instance.id }}" method="post">
+                                    {% csrf_token %}
+                                    <button type="submit" class="btn btn-default btn-es" name="like">
+                                            <span class="glyphicon glyphicon glyphicon-thumbs-up"></span>
+                                    </button>
+                                            <span>{{ instance.rate }} Likes</span>
+                                    <button type="submit" class="btn btn-default btn-es" name="dislike">
+                                            <span class="glyphicon glyphicon glyphicon-thumbs-down"></span>
+                                    </button>
+                                </form>
+                            </div>
+                        {% endif %}
+                    </div>
+                </div>
+                <div class="col-lg-9 col-sm-9 col-md-9 col-es-9">
+                    <div class="bubble">
+                        <div class="pointer">
+                            <h4><b><a href="{% url 'question' %}{{ instance.id }}" >{{ instance.title }}</a></b></h4>
+                            <p>{{ instance.text }}</p>
+                        </div>
+                        <div class="pointer-border"></div>
+                    </div>
+                    <p class="post-actions"> Tags:
+                        {% for tag in instance.tags.all %}
+                         <a href="{% url 'tag' %}?tag={{ tag }}"> {{ tag }}</a>
+                        {% endfor %}
+
+                </div>
+            </div>
+        </div>
+
+        
+
+
+        {% block question-mini %}
+
+            {% if instance.answers_questions.all|length > 0 %}
+            <img src={% static "line1.png" %} class="line1" width="847" height="54">
+            {% endif %}
+
+            {% for answers in instance.answers_questions.all %}
+                <div class="panel panel-default post">
+                    <div class="panel-body">
+                        <div class="row">
+                            <div class="col-lg-2 col-sm-2 col-md-2 col-es-2">
+                                <a class="post-avatar thumbnail" href="profile.html"><img src={% static "ava.png" %}>
+                                    <div class="text-center">{{ answers.author }}</div>
+                                </a>
+                                {% if user.is_authenticated %}
+                                    <div class="likes text-center">
+                                        <form action="/question/likeA/{{ answers.id }}" method="post">
+                                            {% csrf_token %}
+                                            <button type="submit" class="btn btn-default btn-xs" name="like">
+                                                    <span class="glyphicon glyphicon glyphicon-thumbs-up"></span>
+                                            </button>
+                                                    <span>{{ answers.rate }} Likes</span>
+                                            <button type="submit" class="btn btn-default btn-xs" name="dislike">
+                                                    <span class="glyphicon glyphicon glyphicon-thumbs-down"></span>
+                                            </button>
+                                        </form>
+                                    </div>
+                                {% endif %}
+                            </div>
+                            <div class="col-lg-10 col-sm-10 col-md-10 col-es-10">
+                                <div class="bubble">
+                                    <div class="pointer">
+                                        <p>{{ answers.text }} </p>
+                                    </div>
+                                        {% if answers.right %}
+                                            <div class="input-group">
+                                                  <span class="input-group-addon">
+                                                    <input type="checkbox" value="right" checked disabled >
+                                                  </span>
+                                                    <button type="submit" class="btn btn-default" >Правильный ответ</button>
+                                                </div>
+                                        {% else %}
+                                            {% if user == instance.author %}
+                                                <form action="/question/rightA/{{ answers.id }}" method="post">
+                                                    {% csrf_token %}
+                                                    <div class="input-group">
+                                                      <span class="input-group-addon">
+                                                        <input type="checkbox" value="right" disabled >
+                                                      </span>
+                                                        <button type="submit" class="btn btn-default" >Это правильный ответ</button>
+                                                    </div>
+                                                </form>
+                                            {% endif %}
+                                        {% endif %}
+                                    <div class="pointer-border"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        {% endblock %}
+
+           
+
+        {% if user.is_authenticated %}
+            <img src={% static "line1.png" %}  class="line1" width="847" height="32">
+            <div class="form-group">
+                <form action="/question/newcomment/{{ instance.id }}" method="post" name="text" id="text">
+                    {% csrf_token %}
+                    {{ form.text|add_class:"form-control control" }}
+                    {% for error in form.text.errors %}
+                        <p class="danger">{{ error }}</p>
+                    {% endfor %}
+                    <button type="submit" class="btn btn-success askbutton">Ответить</button>
+                </form>
+            </div>
+        {% endif %}
+    {% endfor %}
+{% endblock %}                      
+            
+      
+{% block rightcolumn %}
+{% include "rightcolumn.html" %}
+{% endblock %}   

@@ -1,0 +1,34 @@
+{% block question-mini %}
+    {% load staticfiles %}
+
+
+<div class="panel panel-default post">
+<div class="panel-body">
+    <div class="row">
+        <div class="col-lg-2 col-sm-2 col-md-2 col-es-2">
+            <a class="post-avatar thumbnail" href="profile.html"><img src={% static "ava.png" %}>
+                <div class="text-center">DevUser2</div>
+            </a>
+            <div class="likes text-center">
+            <button type="button" class="btn btn-default btn-xs">
+                  <span class="glyphicon glyphicon glyphicon-thumbs-up"></span>
+            </button>
+            7 Likes
+            <button type="button" class="btn btn-default btn-xs">
+                  <span class="glyphicon glyphicon glyphicon-thumbs-down"></span>
+            </button>
+            </div>
+        </div>
+        <div class="col-lg-10 col-sm-10 col-md-10 col-es-10">
+            <div class="bubble">
+                <div class="pointer">
+                    <p>В жару лучше пить прохладную (12'С) воду, например, с добавлением сока лимона. И лучше это делать небольшими порциями, но часто. Если Вы готовите для домашнего принятия воды или с возможностью ее взять с собой, то можно делать разные миксы: С вечера приготовьте графин с чистой водой, добавьте туда порезанные фрукты, овощи, ягоды, цитрусы, травки или корешки, поставь на ночь в холодильник, а утром начинайте наслаждаться ей вместо кофе, чая, газировки и, конечно же, вместо алкоголя. В состав можно добавить:  ... </p>
+                </div>
+                <input type="checkbox" value="remember-me"> Правильный ответ
+                <div class="pointer-border"></div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+{% endblock %}  

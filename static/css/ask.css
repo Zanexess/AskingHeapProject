@@ -1,0 +1,51 @@
+.titlerow{
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+.textrow{
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+.tagsrow{
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+.textform{
+    min-height: 300px;
+}
+
+.textinput{
+    padding-bottom: 10px;
+}
+
+.control{
+    resize: none;
+    padding-bottom: 10px;
+}
+
+.naming {
+    font-size: medium;
+    padding-top: 6px;
+    text-align: center;
+}
+
+.titletext{
+    padding-bottom: 4px;
+    font-size: x-large;
+}
+
+.askbutton{
+    margin-top: 10px;
+    margin-left: 35%;
+    margin-right: 40%;
+    width:  200px;
+}
+
+.danger{
+    margin-top: 10px;
+    text-align: center;
+    color: red;
+}

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AskingHeap</title>
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/signin.css" rel="stylesheet">
+  </head>
+  <header>
+      <div class="container" class="logo">
+          <img src="static/logo.png">
+      </div>
+  </header>
+  <body>
+      <div class="navbar navbar-inverse navbar-static-top">
+         <div class="container">
+            <div class="navbar-header">         
+               <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#responsive-menu">
+                   <span class="sr-only">Открыть навигацию</span>
+                   <span class="icon-bar"></span>
+                   <span class="icon-bar"></span>
+                   <span class="icon-bar"></span>
+               </button>
+            </div>
+            <div class="collapse navbar-collapse" id="responsive-menu">
+                <ul class="nav navbar-nav">
+                        <li class="active"><a href="index.html">Вопросы</a> </li>
+                        <li><a href="ask.html">Задать вопрос</a> </li>
+                        <li><a href="profile.html">Профиль</a></li>
+                        <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Меню<b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            
+                            <li><a href="login.html">Войти</a></li>
+                            <li><a href="register.html">Регистрация</a></li>
+                            <li><a href="#">Статистика</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">О проекте</a></li>
+                        </ul>
+                       </li>
+                </ul>
+                <!--Для всего, кроме планшета-->
+                <form action="" class="navbar-form navbar-right hidden-sm">
+                        <button type="submit" class="btn btn-primary">
+                            <i></i> Войти
+                        </button>
+                        
+                        <button type="submit" class="btn btn-success">
+                            <i></i> Регистрация
+                        </button>   
+                </form>
+                <!--Для планшета-->
+                <form action="" class="navbar-form navbar-right">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Search" value="">
+                        </div>
+                        <button type="submit" class="btn btn-primary">
+                            <i></i> Поиск
+                        </button>
+                </form>
+                
+            </div>
+        </div>
+     </div>
+
+  
+    <div class="container">
+        <div class="col-lg-4 col-sm-4 col-md-4 col-es-4"></div>
+        <div class="col-lg-4 col-sm-4 col-md-4 col-es-4">
+             <style>
+                 .text{
+                     text-align: center;
+                 }
+            </style>
+              <form class="form-signin" role="form">
+                <h2 class="form-signin-heading text">Войти</h2>
+                <input type="email" class="form-control" placeholder="Email address" required autofocus>
+                <input type="password" class="form-control" placeholder="Password" required>     
+                  <label class="checkbox">
+                  <p class="danger">Тут уведомление об ошибке</p> 
+                  <input type="checkbox" value="remember-me"> Запомни меня
+                   </label>
+                 <div class="col-lg-3 col-sm-3 col-md-3 col-es-3"></div>
+
+                <button class="btn btn-lg btn-primary btn-block" type="submit">Войти</button>
+              </form>
+        </div>
+        <div class="col-lg-4 col-sm-4 col-md-4 col-es-4"></div>
+    </div> <!-- /container -->
+    
+    
+    
+   </body>    
+     
+    <footer>
+        <div class="text">
+              ©Todos los derechos reservados 
+        </div>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+</html>

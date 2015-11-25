@@ -1,0 +1,86 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% block title %}Листинг вопросов{% endblock %}
+
+
+{% block login %}
+    {% include "login_auth.html" %}
+{% endblock %}
+
+{% block leftcolumntop %}
+<div class="col-lg-9 col-sm-9 col-md-9">
+       <style>
+          .text{
+              text-align: center;
+          }
+       </style>
+   <div class="col-lg-4 col-sm-4 col-md-4 col-es-4 text">
+       <h3><b><a href="/question/last/10">Новые вопросы</a></b></h3>
+    </div>
+   <div class="col-lg-4 col-sm-4 col-md-4 col-es-4 text">
+       <h3><b><a href="/question/last/10">Горячие вопросы</a></b></h3>
+   </div>
+     <br>
+     <br>
+     <br>
+     <br>
+
+
+
+    {% for instance in queryset %}
+        <div class="panel panel-default post">
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-lg-3 col-sm-3 col-md-3 col-es-3">
+                    <a class="post-avatar thumbnail" href="profile.html"><img src={% static "ava.png" %}>
+                        <div class="text-center">{{ instance.author }}</div>
+                    </a>
+                    <div class="likes text-center">
+                        {% if user.is_authenticated %}
+                            <div class="likes text-center">
+                                <form action="/question/like/{{ instance.id }}" method="post">
+                                    {% csrf_token %}
+                                    <button type="submit" class="btn btn-default btn-es" name="like">
+                                            <span class="glyphicon glyphicon glyphicon-thumbs-up"></span>
+                                    </button>
+                                            <span>{{ instance.rate }} Likes</span>
+                                    <button type="submit" class="btn btn-default btn-es" name="dislike">
+                                            <span class="glyphicon glyphicon glyphicon-thumbs-down"></span>
+                                    </button>
+                                </form>
+                            </div>
+                        {% endif %}
+                    </div>
+                </div>
+                <div class="col-lg-9 col-sm-9 col-md-9 col-es-9">
+                    <div class="bubble">
+                        <div class="pointer">
+                            <h4><b><a href="{% url 'question' %}{{ instance.id }}" >{{ instance.title }}</a></b></h4>
+                            <p>{{ instance.text }}</p>
+                        </div>
+                        <div class="pointer-border"></div>
+                    </div>
+                    <p class="post-actions"><a href="{% url 'question' %}{{ instance.id }}">Answers({{ instance.answers_questions.all|length }})</a> Tags:
+                        {% for tag in instance.tags.all %}
+                         <a href="{% url 'tag' %}?tag={{ tag }}"> {{ tag }}</a>
+                        {% endfor %}
+
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+
+
+{% endblock %}
+                              
+{% block rightcolumn %}
+<br><br><br>
+{% include "rightcolumn.html" %}
+{% endblock %}    
+
+
+{% block pager %}
+{% include "pager.html" %}
+{% endblock %}    

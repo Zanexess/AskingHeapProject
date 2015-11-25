@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% block login %}
+    {% include "login_auth.html" %}
+{% endblock %}
+
+
+{% block include %}
+        <link href={% static "css/ask.css" %} rel="stylesheet">
+{% endblock %} 
+
+{% block title %}Страница вопроса{% endblock %}  
+
+{% block leftcolumntop %}
+<div class="col-lg-9 col-sm-9 col-md-9 ">
+                     
+     {% block question1 %}
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-lg-3 col-sm-3 col-md-3 col-es-3">
+                    <a class="post-avatar thumbnail" href="profile.html"><img src={% static "ava.png" %}>
+                        <div class="text-center">DevUser1</div>
+                    </a>
+                    <div class="likes text-center">
+                    <button type="button" class="btn btn-default btn-es">
+                          <span class="glyphicon glyphicon glyphicon-thumbs-up"></span>
+                    </button>
+                    6 Likes
+                    <button type="button" class="btn btn-default btn-es">
+                          <span class="glyphicon glyphicon glyphicon-thumbs-down"></span>
+                    </button>
+                    </div>
+                </div>
+                <div class="col-lg-9 col-sm-9 col-md-9 col-es-9">
+                    <div class="bubble">
+                        <div class="pointer">
+                            <h4><b>Как научиться находить смысл в сложной, иносказательной поэзии?</b></h4>
+                            <p>Общие советы таковы: читать больше поэзии, читать медленно (вдумчиво), ставить под вопрос каждое слово и его связи с другими словами, не стесняться пользоваться справочными материалами (в современной поэзии вы легко встретите и героев античной мифологии третьего ряда, и терминологию из теоретической физики или экономики, и отсылки к философам). Подходя к произведению, стоит руководствоваться так называемой презумпцией смысла: вы предполагаете, что в нем заключаются осмысленные сообщения, и ваша задача как читателя — считать, дешифро ... </p>
+                        </div>
+                        <div class="pointer-border"></div>
+                    </div>
+                    <p class="post-actions">Tags: <a href="#"> Литература</a> <a href="#">, поэзия</a> </p>
+                </div>
+            </div>
+        </div>
+        {% endblock %}  
+        
+        <img src={% static "line1.png" %} class="line1" width="847" height="54">
+
+        {% block question-mini %}
+        {% include "question-mini.html" %}
+        {% include "question-mini.html" %}
+        {% include "question-mini.html" %}
+        {% endblock %}   
+           
+           
+           <img src={% static "line1.png" %}  class="line1" width="847" height="32">
+    <div class="form-group">
+    <form action="/question/newcomment/" method="post">
+        {% csrf_token %}
+        <textarea class="form-control control" rows="5" placeholder="Введите ответ здесь" name="text" id="text"></textarea>
+        <button type="submit" class="btn btn-default askbutton">Ответить</button>
+    </form>
+    </div>   
+{% endblock %}                      
+            
+      
+{% block rightcolumn %}
+{% include "rightcolumn.html" %}
+{% endblock %}   

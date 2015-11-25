@@ -1,0 +1,211 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% block title %}Листинг вопросов{% endblock %}
+
+{% block slider %}
+{% include "slider.html" %}
+{% endblock %}
+
+{% block login %}
+    {% include "login_auth.html" %}
+{% endblock %}
+
+{% block leftcolumntop %}
+<div class="col-lg-9 col-sm-9 col-md-9">
+       <style>
+          .text{
+              text-align: center;
+          }
+       </style>
+   <div class="col-lg-4 col-sm-4 col-md-4 col-es-4 text">
+       <h3><b><a href="#">Новые вопросы</a></b></h3>
+    </div>
+   <div class="col-lg-4 col-sm-4 col-md-4 col-es-4 text">
+       <h3><a href="#">Горячие вопросы</a></h3>
+   </div>
+     <br>
+     <br>
+     <br>
+     <br>
+                     
+     {% block question1 %}
+    <div class="panel panel-default post">
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-lg-3 col-sm-3 col-md-3 col-es-3">
+                    <a class="post-avatar thumbnail" href="profile.html"><img src={% static "ava.png" %}>
+                        <div class="text-center">DevUser1</div>
+                    </a>
+                    <div class="likes text-center">
+                    <button type="button" class="btn btn-default btn-es">
+                          <span class="glyphicon glyphicon glyphicon-thumbs-up"></span>
+                    </button>
+                    6 Likes
+                    <button type="button" class="btn btn-default btn-es">
+                          <span class="glyphicon glyphicon glyphicon-thumbs-down"></span>
+                    </button>
+                    </div>
+                </div>
+                <div class="col-lg-9 col-sm-9 col-md-9 col-es-9">
+                    <div class="bubble">
+                        <div class="pointer">
+                            <h4><b>Как научиться находить смысл в сложной, иносказательной поэзии?</b></h4>
+                            <p>Общие советы таковы: читать больше поэзии, читать медленно (вдумчиво), ставить под вопрос                                                    каждое слово и его связи с другими словами, не стесняться пользоваться справочными                                                           материалами (в современной поэзии вы легко встретите и героев античной мифологии третьего                                                   ряда, и терминологию из теоретической физики или экономики, и отсылки к философам). Подходя                                                 к произведению, стоит руководствоваться так называемой презумпцией смысла: вы предполагаете,                                                 что в нем заключаются осмысленные сообщения, и ваша задача как читателя — считать, дешифро                                                   ... </p>
+                        </div>
+                        <div class="pointer-border"></div>
+                    </div>
+                    <p class="post-actions"><a href="post.html">Answers(2)</a> Tags: <a href="#"> Литература</a> <a                                             href="#">, поэзия</a> </p> 
+
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endblock %} 
+
+
+    {% block question2 %}  
+    <div class="panel panel-default post">
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-lg-3 col-sm-3 col-md-3 col-es-3">
+                    <a class="post-avatar thumbnail" href="profile.html"><img src={% static "ava.png" %}>
+                        <div class="text-center">DevUser2</div>
+                    </a>
+                    <div class="likes text-center">
+                    <button type="button" class="btn btn-default btn-es">
+                          <span class="glyphicon glyphicon glyphicon-thumbs-up"></span>
+                    </button>
+                    7 Likes
+                    <button type="button" class="btn btn-default btn-es">
+                          <span class="glyphicon glyphicon glyphicon-thumbs-down"></span>
+                    </button>
+                    </div>
+                </div>
+                <div class="col-lg-9 col-sm-9 col-md-9 col-es-9">
+                    <div class="bubble">
+                        <div class="pointer">
+                            <h4><b>Какую воду лучше пить в жару? Газированную или нет?</b></h4>
+                            <p>В жару лучше пить прохладную (12'С) воду, например, с добавлением сока лимона. И лучше это делать небольшими порциями, но часто. Если Вы готовите для домашнего принятия воды или с возможностью ее взять с собой, то можно делать разные миксы: С вечера приготовьте графин с чистой водой, добавьте туда порезанные фрукты, овощи, ягоды, цитрусы, травки или корешки, поставь на ночь в холодильник, а утром начинайте наслаждаться ей вместо кофе, чая, газировки и, конечно же, вместо алкоголя. В состав можно добавить:  ... </p>
+                        </div>
+                        <div class="pointer-border"></div>
+                    </div>
+                    <p class="post-actions"><a href="post.html">Answers(2)</a> Tags: <a href="#"> Газировка</a> <a href="#">, вода</a> </p> 
+
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endblock %}
+
+    {% block question3 %}          
+    <div class="panel panel-default post">
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-lg-3 col-sm-3 col-md-3 col-es-3">
+                    <a class="post-avatar thumbnail" href="profile.html"><img src={% static "ava.png" %}>
+                        <div class="text-center">DevUser3</div>
+                    </a>
+                    <div class="likes text-center">
+                    <button type="button" class="btn btn-default btn-es">
+                          <span class="glyphicon glyphicon glyphicon-thumbs-up"></span>
+                    </button>
+                    2 Likes
+                    <button type="button" class="btn btn-default btn-es">
+                          <span class="glyphicon glyphicon glyphicon-thumbs-down"></span>
+                    </button>
+                    </div>
+                </div>
+                <div class="col-lg-9 col-sm-9 col-md-9 col-es-9">
+                    <div class="bubble">
+                        <div class="pointer">
+                            <h4><b>Изучают ли паралитературу, и, если да, то как именно и зачем?</b></h4>
+                            <p>Разумеется, да: это представляет и культурологический, и социологический интерес. Мне известны работы о Донцовой и Марининой (в том числе западных славистов, см., например: ac.be ; dukeupress.edu). А вот, например, диссертация о фанфикшене: (pitt.edu). Прямо сейчас я пишу рецензию на книгу французского культуролога Фредерика Рувиллуа «История бестселлеров», к сожалению, испохабленную в переводе. Рувиллуа пытается отыскать факторы, делающие книгу бестселлером (находит в основном во внелитературных причинах). Что касается поэзии, могу порекомендовать книгу Олега Лекманова «Русская поэзия в 1913 году»  ... </p>
+                        </div>
+                        <div class="pointer-border"></div>
+                    </div>
+                    <p class="post-actions"><a href="post.html">Answers(3)</a> Tags: <a href="#"> Литература</a> <a href="#">, культура</a> </p> 
+
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endblock %} 
+
+    {% block question4 %}                           
+    <div class="panel panel-default post">
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-lg-3 col-sm-3 col-md-3 col-es-3">
+                    <a class="post-avatar thumbnail" href="profile.html"><img src={% static "ava.png" %}>
+                        <div class="text-center">DevUser4</div>
+                    </a>
+                    <div class="likes text-center">
+                    <button type="button" class="btn btn-default btn-es">
+                          <span class="glyphicon glyphicon glyphicon-thumbs-up"></span>
+                    </button>
+                    9 Likes
+                    <button type="button" class="btn btn-default btn-es">
+                          <span class="glyphicon glyphicon glyphicon-thumbs-down"></span>
+                    </button>
+                    </div>
+                </div>
+                <div class="col-lg-9 col-sm-9 col-md-9 col-es-9">
+                    <div class="bubble">
+                        <div class="pointer">
+                            <h4><b>Есть ли течения в религиоведении, которые воспринимают бога, как художественный образ.</b></h4>
+                            <p>Дело в том, что религиоведение не занимается изучением Бога или формированием какого-то мнения о Боге (этим занимается теология), но оно изучает объективно существующие представления о Боге или богах, почерпнутые из материальных источников (текстов, людей и т. д.). Воспринимать бога как художественный образ - это мировоззренческая позиция. Наука всегда должна быть мировоззренчески нейтральна. Текст религиоведческого исследования составляется таким образом, чтобы он ...  </p>
+                        </div>
+                        <div class="pointer-border"></div>
+                    </div>
+                    <p class="post-actions"><a href="post.html">Answers(2)</a> Tags: <a href="#"> Религия</a></p> 
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endblock %}     
+
+    {% block question5 %}                   
+    <div class="panel panel-default post">
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-lg-3 col-sm-3 col-md-3 col-es-3">
+                    <a class="post-avatar thumbnail" href="profile.html"><img src={% static "ava.png" %}>
+                        <div class="text-center">DevUser5</div>
+                    </a>
+                    <div class="likes text-center">
+                    <button type="button" class="btn btn-default btn-es">
+                          <span class="glyphicon glyphicon glyphicon-thumbs-up"></span>
+                    </button>
+                    7 Likes
+                    <button type="button" class="btn btn-default btn-es">
+                          <span class="glyphicon glyphicon glyphicon-thumbs-down"></span>
+                    </button>
+                    </div>
+                </div>
+                <div class="col-lg-9 col-sm-9 col-md-9 col-es-9">
+                    <div class="bubble">
+                        <div class="pointer">
+                            <h4><b>Какую помаду любила Ева Браун?</b></h4>
+                            <p>Вот страница, на которой предлагают купить личные вещи Евы Браун: (snyderstreasures.com). Я не уверен, что эти вещи подлинные, хотя к каждой там прилагается провенанс, но среди них есть несколько коробочек из-под губной помады. Вещи, как видим, изысканные и дорогие, так что если это действительно ее вещи, то можно ответить, что она любила дорогую помаду. На коробочке, кажется, написано слово «Italy». Сама помада видн  ... </p>
+                        </div>
+                        <div class="pointer-border"></div>
+                    </div>
+                    <p class="post-actions"><a href="post.html">Answers(1)</a> Tags: <a href="#"> Красота</a> <a href="#">, история</a> </p> 
+
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endblock %}
+{% endblock %}
+                              
+{% block rightcolumn %}
+<br><br><br>
+{% include "rightcolumn.html" %}
+{% endblock %}    
+
+
+{% block pager %}
+{% include "pager.html" %}
+{% endblock %}    
