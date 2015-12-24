@@ -39,7 +39,7 @@
                                     <form>
                                         <div class="form-group">
                                             {{ form.text|add_class:"form-control control" }}
-                                            {% if form.title.errors %}
+                                            {% if form.text.errors %}
                                                 {{ form.text.errors }}
                                             {% endif %}
                                         </div>
@@ -55,6 +55,9 @@
                                     {{ form.tags|add_class:"form-control control" }}
                                     {% if form.tags.errors %}
                                         {{ form.tags.errors }}
+                                    {% endif %}
+                                    {% if danger %}
+                                         <p class="danger">{{ danger }}</p>
                                     {% endif %}
                                 </div>
                             </div>

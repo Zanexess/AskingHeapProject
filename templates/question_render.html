@@ -133,9 +133,6 @@
                 <form action="/question/newcomment/{{ instance.id }}" method="post" name="text" id="text">
                     {% csrf_token %}
                     {{ form.text|add_class:"form-control control" }}
-                    {% for error in form.text.errors %}
-                        <p class="danger">{{ error }}</p>
-                    {% endfor %}
                     <button type="submit" class="btn btn-success askbutton">Ответить</button>
                 </form>
             </div>

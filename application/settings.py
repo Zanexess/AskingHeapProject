@@ -138,3 +138,5 @@ EMAIL_HOST_USER = 'askingheapproject@gmail.com'
 EMAIL_HOST_PASSWORD = 'askingheap'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
+
+LOGIN_REDIRECT_URL = "/auth/login";

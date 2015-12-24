@@ -25,7 +25,6 @@ class Command(BaseCommand):
                     likeToQuestion = LikeToQuestion(like_author=user, to_question=question, value=1)
                     likeToQuestion.save()
 
-
         for answer in all_answers:
             for user in all_users:
                 b = random.randint(0, 2)
